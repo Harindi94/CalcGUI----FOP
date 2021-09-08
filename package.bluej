@@ -1,46 +1,129 @@
-#BlueJ package file
-editor.fx.0.height=830
-editor.fx.0.width=787
-editor.fx.0.x=-5
-editor.fx.0.y=0
-objectbench.height=114
-objectbench.width=761
-package.divider.horizontal=0.6
-package.divider.vertical=0.7595693779904306
-package.editor.height=375
-package.editor.width=674
-package.editor.x=318
-package.editor.y=11
-package.frame.height=600
-package.frame.width=800
-package.numDependencies=0
-package.numTargets=3
-package.showExtends=true
-package.showUses=true
-project.charset=UTF-8
-readme.height=60
-readme.name=@README
-readme.width=49
-readme.x=10
-readme.y=10
-target1.height=70
-target1.name=WorkingCal
-target1.showInterface=false
-target1.type=ClassTarget
-target1.width=120
-target1.x=10
-target1.y=110
-target2.height=70
-target2.name=CalcGUI
-target2.showInterface=false
-target2.type=ClassTarget
-target2.width=120
-target2.x=80
-target2.y=10
-target3.height=70
-target3.name=Calculator
-target3.showInterface=false
-target3.type=ClassTarget
-target3.width=120
-target3.x=230
-target3.y=10
+import java.awt.*;
+import javax.swing.*;
+/**
+ * Write a description of class CalcGUI here.
+ *
+ * @author (your name)
+ * @version (a version number or a date)
+ */
+public class CalcGUI extends JFrame
+{
+  //
+  JPanel panelTop;
+  JPanel panelLeft;
+  JPanel panelRight;
+  JPanel panelBottom;
+  //
+  JTextField calcDisplay;
+  //
+  JButton buttonOne;
+  JButton buttonTwo;
+  JButton buttonThree;
+  JButton buttonFour;
+  JButton buttonFive;
+  JButton buttonSix;
+  JButton buttonSeven;
+  JButton buttonEight;
+  JButton buttonNine;
+  JButton buttonZero;
+  JButton buttonSign;
+  JButton buttonDot;
+  JButton buttonEqual;
+  //
+  JButton buttonAdd;
+  JButton buttonSub;
+  JButton buttonMul;
+  JButton buttonDiv;
+  JButton buttonFac;
+  //
+  JButton buttonBackspace;
+  JButton buttonClear;
+  JButton buttonOpenBracket;
+  JButton buttonCloseBracket;
+  JButton buttonOff;
+  
+  /**
+   * Constructor for objects of class CalcGUI
+   */
+  public CalcGUI(){
+      super("My PROG5001 Calculator");
+      setPreferredSize(new Dimension(400,400));
+      setLayout(null);
+      
+      JPanel panelTop = new JPanel();
+      panelTop.setBackground(Color.green);
+      panelTop.setBounds(10,10,360,35);
+      add(panelTop);
+      
+      JPanel panelBottom = new JPanel();
+      panelBottom.setBackground(Color.red);
+      panelBottom.setBounds(10,50,360,150);
+      add(panelBottom);
+      //
+      calcDisplay = new JTextField();
+      calcDisplay.setPreferredSize(new Dimension(350,25));
+      panelTop.add(calcDisplay);
+      //
+      buttonOne = new JButton("1");
+      buttonTwo = new JButton("2");
+      buttonThree = new JButton("3");
+      buttonFour = new JButton("4");
+      buttonFive = new JButton("5");
+      buttonSix = new JButton("6");
+      buttonSeven = new JButton("7");
+      buttonEight = new JButton("8");
+      buttonNine = new JButton("9");
+      buttonZero = new JButton("0");
+      buttonDot = new JButton(".");
+      buttonSign = new JButton("+/-");
+      buttonEqual = new JButton("=");
+      //
+      buttonAdd = new JButton("+");
+      buttonSub = new JButton("-");
+      buttonMul = new JButton("*");
+      buttonDiv = new JButton("/");
+      buttonFac = new JButton("!");
+      //
+      buttonBackspace = new JButton("<<");
+      buttonClear = new JButton("C");
+      buttonOpenBracket = new JButton("(");
+      buttonCloseBracket = new JButton(")");
+      buttonOff = new JButton("OFF");
+      //
+      panelBottom.add(buttonOne);
+      panelBottom.add(buttonTwo);
+      panelBottom.add(buttonThree);
+      panelBottom.add(buttonFour);
+      panelBottom.add(buttonFive);
+      panelBottom.add(buttonSix);
+      panelBottom.add(buttonSeven);
+      panelBottom.add(buttonEight);
+      panelBottom.add(buttonNine);
+      panelBottom.add(buttonZero);
+      panelBottom.add(buttonDot);
+      panelBottom.add(buttonSign);
+      panelBottom.add(buttonEqual);
+      //
+      panelBottom.add(buttonAdd);
+      panelBottom.add(buttonSub);
+      panelBottom.add(buttonMul);
+      panelBottom.add(buttonDiv);
+      panelBottom.add(buttonFac);
+      //
+      panelBottom.add(buttonBackspace);
+      panelBottom.add(buttonClear);
+      panelBottom.add(buttonOpenBracket);
+      panelBottom.add(buttonCloseBracket);
+      panelBottom.add(buttonOff);
+      //
+      pack();
+  }
+  
+  /**
+   * The main method
+   */
+  public static void main (String[] arg){
+      CalcGUI gui = new CalcGUI();
+      gui.setVisible(true);
+  }
+}
